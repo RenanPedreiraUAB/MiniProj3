@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "83165b69-e265-4ddb-9f23-6c2298e2a7a5",
+		"name": "ANIMALEC API - Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23557541"
+	},
+	"item": [
+		{
+			"name": "Criar especialista",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Michael Zenin\",\r\n  \"animaliaFamily\": \"Aves\",\r\n  \"description\": \"Especialista em aves tropicais\",\r\n  \"photoUrl\": \"https://example.com/michael-zenin.jpg\",\r\n  \"contactInfo\": \"michael.zenin@aves.org\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/experts",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"experts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar especialista",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Michael Zenin\",\r\n  \"animaliaFamily\": \"Répteis\",\r\n  \"description\": \"Especialista em aves tropicais\",\r\n  \"photoUrl\": \"https://example.com/michael-zenin.jpg\",\r\n  \"contactInfo\": \"michael.zenin@aves.org\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/experts/67702f8c9f2fa82d65ca3906",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"experts",
+						"67702f8c9f2fa82d65ca3906"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar especialistas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/experts",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"experts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apagar especialistas",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/experts/67702f8c9f2fa82d65ca3906",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"experts",
+						"67702f8c9f2fa82d65ca3906"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar patrocinador",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Banco XYZ\",\r\n  \"animal\": \"Tigre\",\r\n  \"description\": \"Patrocinador oficial do programa.\",\r\n  \"photoUrl\": \"https://example.com/logo.jpg\",\r\n  \"link\": \"https://bancoxyz.com\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/sponsors",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"sponsors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar patrocinador",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Banco XYZ\",\r\n  \"animal\": \"Jacaré\",\r\n  \"description\": \"Patrocinador oficial do programa.\",\r\n  \"photoUrl\": \"https://example.com/logo.jpg\",\r\n  \"link\": \"https://bancoxyz.com\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/sponsors/6761d53ab89181945dd81d89",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"sponsors",
+						"6761d53ab89181945dd81d89"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar patrocinadores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/sponsors",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"sponsors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apagar patrocinador",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/sponsors/676f09b98315f23b9c7851da",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"sponsors",
+						"676f09b98315f23b9c7851da"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000/api",
+			"type": "string"
+		}
+	]
+}
